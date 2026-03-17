@@ -1,0 +1,143 @@
+.
+├── components
+├── components.json
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── node_modules
+│   ├── class-variance-authority -> .pnpm/class-variance-authority@0.7.1/node_modules/class-variance-authority
+│   ├── clsx -> .pnpm/clsx@2.1.1/node_modules/clsx
+│   ├── eslint -> .pnpm/eslint@9.39.4_jiti@2.6.1/node_modules/eslint
+│   ├── eslint-config-next -> .pnpm/eslint-config-next@16.1.7_@typescript-eslint+parser@8.57.1_eslint@9.39.4_jiti@2.6.1__ty_e2c0ae96222ecf6c23b8d8e1ee5f2018/node_modules/eslint-config-next
+│   ├── lucide-react -> .pnpm/lucide-react@0.577.0_react@19.2.3/node_modules/lucide-react
+│   ├── next -> .pnpm/next@16.1.7_@babel+core@7.29.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next
+│   ├── radix-ui -> .pnpm/radix-ui@1.4.3_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react@19.2.14_react_5d533b4983dc5c891c8cde1f5968d5b9/node_modules/radix-ui
+│   ├── react -> .pnpm/react@19.2.3/node_modules/react
+│   ├── react-dom -> .pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom
+│   ├── shadcn -> .pnpm/shadcn@4.0.8_@types+node@20.19.37_typescript@5.9.3/node_modules/shadcn
+│   ├── @tailwindcss
+│   │   └── postcss -> ../.pnpm/@tailwindcss+postcss@4.2.1/node_modules/@tailwindcss/postcss
+│   ├── tailwindcss -> .pnpm/tailwindcss@4.2.1/node_modules/tailwindcss
+│   ├── tailwind-merge -> .pnpm/tailwind-merge@3.5.0/node_modules/tailwind-merge
+│   ├── tw-animate-css -> .pnpm/tw-animate-css@1.4.0/node_modules/tw-animate-css
+│   ├── @types
+│   │   ├── node -> ../.pnpm/@types+node@20.19.37/node_modules/@types/node
+│   │   ├── react -> ../.pnpm/@types+react@19.2.14/node_modules/@types/react
+│   │   └── react-dom -> ../.pnpm/@types+react-dom@19.2.3_@types+react@19.2.14/node_modules/@types/react-dom
+│   └── typescript -> .pnpm/typescript@5.9.3/node_modules/typescript
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+├── src
+│   ├── app
+│   │   ├── (auth)
+│   │   │   ├── sign-in
+│   │   │   │   └── page.tsx
+│   │   │   └── sign-up
+│   │   │       └── page.tsx
+│   │   ├── (dashboard)
+│   │   │   ├── dashboard
+│   │   │   │   ├── categories
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── customers
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── orders
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── products
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── edit
+│   │   │   │   │   │       └── page.tsx
+│   │   │   │   │   ├── new
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── settings
+│   │   │   │       └── page.tsx
+│   │   │   └── layout.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   └── (store)
+│   │       ├── account
+│   │       │   ├── orders
+│   │       │   │   └── page.tsx
+│   │       │   └── profile
+│   │       │       └── page.tsx
+│   │       ├── cart
+│   │       │   └── page.tsx
+│   │       ├── checkout
+│   │       │   └── page.tsx
+│   │       ├── layout.tsx
+│   │       ├── page.tsx
+│   │       └── products
+│   │           ├── page.tsx
+│   │           └── [slug]
+│   │               └── page.tsx
+│   ├── components
+│   │   ├── dashboard
+│   │   │   ├── DashboardShell.tsx
+│   │   │   ├── Header.tsx
+│   │   │   └── Sidebar.tsx
+│   │   ├── forms
+│   │   ├── shared
+│   │   │   ├── EmptyState.tsx
+│   │   │   ├── Logo.tsx
+│   │   │   ├── PageHeader.tsx
+│   │   │   ├── SearchInput.tsx
+│   │   │   └── SectionHeading.tsx
+│   │   ├── store
+│   │   │   ├── CartItem.tsx
+│   │   │   ├── CartSummary.tsx
+│   │   │   ├── CategoryCard.tsx
+│   │   │   ├── FeaturedCategories.tsx
+│   │   │   ├── FeaturedProducts.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── HeroSection.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── ProductCard.tsx
+│   │   │   ├── ProductFilters.tsx
+│   │   │   ├── ProductGallery.tsx
+│   │   │   ├── ProductGrid.tsx
+│   │   │   ├── ProductInfo.tsx
+│   │   │   ├── ProductsToolbar.tsx
+│   │   │   ├── RelatedProducts.tsx
+│   │   │   └── StoreCTA.tsx
+│   │   └── ui
+│   │       ├── badge.tsx
+│   │       ├── button.tsx
+│   │       └── input.tsx
+│   ├── config
+│   │   ├── dashboard-nav.ts
+│   │   ├── site.ts
+│   │   └── store-nav.ts
+│   ├── data
+│   │   ├── cart.ts
+│   │   ├── categories.ts
+│   │   ├── dashboard.ts
+│   │   └── products.ts
+│   ├── hooks
+│   │   └── use-cart.ts
+│   ├── lib
+│   │   ├── constants.ts
+│   │   ├── format.ts
+│   │   └── utils.ts
+│   └── types
+│       ├── cart.ts
+│       ├── order.ts
+│       ├── product.ts
+│       └── user.ts
+├── structure.txt
+└── tsconfig.json
+
+58 directories, 82 files
