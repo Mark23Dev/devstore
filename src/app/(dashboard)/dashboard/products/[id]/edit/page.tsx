@@ -1,13 +1,44 @@
 import { DashboardShell } from "@/src/components/dashboard/DashboardShell";
+import { ProductForm } from "@/src/components/forms/ProductForm";
 import { PageHeader } from "@/src/components/shared/PageHeader";
+import { products } from "@/src/data/products";
+import { notFound } from "next/navigation";
 
 
-export default function EditProductPage() {
+type EditProductPageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function EditProductPage({
+  params,
+}: EditProductPageProps) {
+  const product = products.find((item) => item.id === params.id);
+
+  if (!product) {
+    notFound();
+  }
+
   return (
     <DashboardShell>
       <PageHeader
         title="Edit Product"
         description="Update product information and inventory details."
+      />
+
+      <ProductForm
+        mode="edit"
+        defaultValues={{
+          name: product.name,
+          slug: product.slug,
+          description: product.description,
+          price: product.price,
+          brand: product.brand,
+          stock: product.stock,
+          category: product.category,
+          image: product.image,
+        }}
       />
     </DashboardShell>
   );
