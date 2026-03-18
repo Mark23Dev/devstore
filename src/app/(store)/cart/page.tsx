@@ -20,6 +20,11 @@ export default function CartPage() {
         <EmptyState
           title="Your cart is empty"
           description="Add products to your cart to continue shopping."
+          action={
+            <Button asChild>
+              <Link href="/products">Browse Products</Link>
+            </Button>
+          }
         />
       ) : (
         <div className="grid gap-8 lg:grid-cols-[1fr_340px] lg:items-start">
