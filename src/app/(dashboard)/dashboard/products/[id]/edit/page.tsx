@@ -11,10 +11,11 @@ type EditProductPageProps = {
   };
 };
 
-export default function EditProductPage({
+export default async function EditProductPage({
   params,
 }: EditProductPageProps) {
-  const product = products.find((item) => item.id === params.id);
+  const { id } = await params;
+  const product =  products.find((item) => item.id === id);
 
   if (!product) {
     notFound();
