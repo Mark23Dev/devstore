@@ -6,15 +6,16 @@ import { notFound } from "next/navigation";
 
 
 type EditCategoryPageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default function EditCategoryPage({
+export default async function EditCategoryPage({
   params,
 }: EditCategoryPageProps) {
-  const category = categories.find((item) => item.id === params.id);
+  const { id } = await params
+  const category = categories.find((item) => item.id === id);
 
   if (!category) {
     notFound();

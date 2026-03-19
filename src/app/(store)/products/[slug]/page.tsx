@@ -4,17 +4,18 @@ import { RelatedProducts } from "@/src/components/store/RelatedProducts";
 import { products } from "@/src/data/products";
 import { notFound } from "next/navigation";
 
-
 type ProductDetailsPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function ProductDetailsPage({
+export default async function ProductDetailsPage({
   params,
 }: ProductDetailsPageProps) {
-  const product = products.find((item) => item.slug === params.slug);
+  const { slug } = await params;
+
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
@@ -32,7 +33,7 @@ export default function ProductDetailsPage({
           <h2 className="text-2xl font-semibold tracking-tight">
             Product details
           </h2>
-          <p className="max-w-3xl text-muted-foreground leading-7">
+          <p className="max-w-3xl leading-7 text-muted-foreground">
             {product.description}
           </p>
         </div>
